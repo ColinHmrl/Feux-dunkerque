@@ -1,0 +1,188 @@
+<!--
+
+Observation et materiel remplacé : création du tableau si checkbox cochée, créer l'ajout et la suppression de lignes 
+
+Trouver un format Date en JJ/MM/AAAA a inscrire au clavier de nombres 
+pareil pour les formats horraires : HH:MM
+
+Se renseigner sur la converstion en pdf.
+
+Question :
+- N° SUPPORT : format ? 
+- Intervention terminée ? qu'est ce que ça représente ?
+
+
+
+
+
+-->
+
+
+
+
+<!doctype html>
+<html lang="fr">
+	 <head>
+		<meta charset="utf-8">
+		<title>Suivis carrefour</title>	
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+		<link rel="stylesheet" href="style.css">
+	 </head>
+	 <body>
+	 	<form>
+	 		<div class="container" style="margin-top: 20px;margin-bottom: 20px;">
+	 			<form>
+		 			<div class="row">
+		 				<div class="col-7">
+		 					<div class="row">
+			 					<p class="col-6" >CARREFOUR :</p>	
+			 					<input class="col-6" type="" name=""> 		
+			 					<p class="col-6" >N° SUPPORT :</p>	
+			 					<input class="col-6" type="" name="">		
+			 					<p class="col-6" >Demandé par :</p>	
+								<input class="col-6" type="" name=""> 
+								<p class="col-6" >Date :</p>	
+								<input class="col-6" type="" name="">
+								<p class="col-6" >intervenant :</p>	
+								<input class="col-6" type="" name="">
+
+			 				</div>
+			 			</div>
+			 			<div class="col-5">  
+			 				<div class="row">
+				 				<p class="col-12">ETAT :</p>
+				 			</div>	
+				 			<div class="row">
+				 				<label class="col-6" for="etat1">ACCID</label><input class="col-6" type="checkbox" id="etat1" name="etat1" value="ACCID">
+				 				<label class="col-6" for="etat2">VETUSTE</label><input class="col-6" type="checkbox" id="etat2" name="etat2" value="VETUSTE">
+				 				<label class="col-6" for="etat3">MODIF.</label><input class="col-6" type="checkbox" id="etat3" name="etat3" value="MODIF">
+
+				 				<label class="col-6" for="etat4">VANDAL.</label><input class="col-6" type="checkbox" id="etat4" name="etat4" value="VANDAL">
+				 				<label class="col-6" for="etat5">PANNE</label><input class="col-6" type="checkbox" id="etat5" name="etat5" value="PANNE">
+				 				<label class="col-6" for="etat6">ORAGE</label><input class="col-6" type="checkbox" id="etat6" name="etat6" value="ORAGE">
+	  						</div>
+	  						
+			 			</div>
+			 			<fieldset>
+			 				<legend> Etat du carrefour à l'arrivée sur le site :</legend>
+			 				<div class="row">
+			 					<label class="col-1" for="etatCarrefourA1">mFP</label><input class="col-1" type="checkbox" id="etatCarrefourA1" name="etatCarrefourA1" value="mFP">
+			 					<label class="col-1" for="etatCarrefourA2">mAC</label><input class="col-1" type="checkbox" id="etatCarrefourA2" name="etatCarrefourA2" value="mAC">
+			 					<label class="col-1" for="etatCarrefourA3">. . .</label><input class="col-1" type="checkbox" id="etatCarrefourA3" name="etatCarrefourA3" value=". . .">
+			 					<label class="col-1" for="etatCarrefourA4">mAH</label><input class="col-1" type="checkbox" id="etatCarrefourA4" name="etatCarrefourA4" value="mAH">
+			 					<label class="col-1" for="etatCarrefourA5">mAL</label><input class="col-1" type="checkbox" id="etatCarrefourA5" name="etatCarrefourA5" value="mAL">
+			 					<p class="col-2"></p>
+			 					<label class="col-1" for="etatCarrefourA6">ADT</label><input class="col-1" type="checkbox" id="etatCarrefourA6" name="etatCarrefourA6" value="ADT">
+			 					<label class="col-1" for="etatCarrefourA7">ABC</label><input class="col-1" type="checkbox" id="etatCarrefourA7" name="etatCarrefourA7" value="ABC">
+			 					<label class="col-1" for="etatCarrefourA8">. . .</label><input class="col-1" type="checkbox" id="etatCarrefourA8" name="etatCarrefourA8" value=". . .">
+			 					<label class="col-1" for="etatCarrefourA9">LOC</label><input class="col-1" type="checkbox" id="etatCarrefourA9" name="etatCarrefourA9" value="LOC">
+			 					<label class="col-1" for="etatCarrefourA10">LOL</label><input class="col-1" type="checkbox" id="etatCarrefourA10" name="etatCarrefourA10" value="LOL">	
+			 				</div>
+			 				<div class="row">
+			 					<label class="col-3" for="etatCarrefourA11">AU NOIR</label><input class="col-3" type="checkbox" id="etatCarrefourA11" name="etatCarrefourA11" value="AU NOIR">
+				 				<label class="col-3" for="etatCarrefourA12">BLOQUE</label><input class="col-3" type="checkbox" id="etatCarrefourA12" name="etatCarrefourA12" value="BLOQUE">
+				 				<label class="col-3" for="etatCarrefourA13">AU CLIGNO</label><input class="col-3" type="checkbox" id="etatCarrefourA13" name="etatCarrefourA13" value="AU CLIGNO">
+				 				<label class="col-3" for="etatCarrefourA14">TRICOLOR</label><input class="col-3" type="checkbox" id="etatCarrefourA14" name="etatCarrefourA14" value="TRICOLOR">
+			 				</div>
+			 			</fieldset>
+			 			<fieldset>
+			 				<legend> Etat du carrefour au depart du site :</legend>
+			 				<div class="row">
+			 					<label class="col-1" for="etatCarrefourR1">mFP</label><input class="col-1" type="checkbox" id="etatCarrefourR1" name="etatCarrefourR1" value="mFP">
+			 					<label class="col-1" for="etatCarrefourR2">mAC</label><input class="col-1" type="checkbox" id="etatCarrefourR2" name="etatCarrefourR2" value="mAC">			 				
+			 					<label class="col-1" for="etatCarrefourR4">mAH</label><input class="col-1" type="checkbox" id="etatCarrefourR4" name="etatCarrefourR4" value="mAH">
+			 					<label class="col-1" for="etatCarrefourR5">mAL</label><input class="col-1" type="checkbox" id="etatCarrefourR5" name="etatCarrefourR5" value="mAL">
+			 					<input class="col-1" type="" name=""><input class="col-1" type="checkbox" id="etatCarrefourR3" name="etatCarrefourR3" value=". . .">	
+			 					<p class="col-2"></p>
+			 					<label class="col-1" for="etatCarrefourR6">ADT</label><input class="col-1" type="checkbox" id="etatCarrefourR6" name="etatCarrefourR6" value="ADT">
+			 					<label class="col-1" for="etatCarrefourR7">ABC</label><input class="col-1" type="checkbox" id="etatCarrefourR7" name="etatCarrefourR7" value="ABC">
+			 					<label class="col-1" for="etatCarrefourR9">LOC</label><input class="col-1" type="checkbox" id="etatCarrefourR9" name="etatCarrefourR9" value="LOC">
+			 					<label class="col-1" for="etatCarrefourR10">LOL</label><input class="col-1" type="checkbox" id="etatCarrefourR10" name="etatCarrefourR10" value="LOL">
+			 					<input class="col-1" type="" name=""><input class="col-1" type="checkbox" id="etatCarrefourR8" name="etatCarrefourR8" value=". . .">
+			 					
+			 				</div>
+			 				<div class="row">
+			 					<label class="col-3" for="etatCarrefourR11">AU NOIR</label><input class="col-3" type="checkbox" id="etatCarrefourR11" name="etatCarrefourR11" value="AU NOIR">
+				 				<label class="col-3" for="etatCarrefourR13">AU CLIGNO</label><input class="col-3" type="checkbox" id="etatCarrefourR13" name="etatCarrefourR13" value="AU CLIGNO">
+				 				<label class="col-3" for="etatCarrefourR14">TRICOLOR</label><input class="col-3" type="checkbox" id="etatCarrefourR14" name="etatCarrefourR14" value="TRICOLOR">
+			 				</div>
+			 			</fieldset>
+			 			<fieldset>
+			 				<legend>Horraire :</legend>
+			 				<div class="row">
+			 					<p class="col-6" >HEURE D'ARRIVEE :</p>	
+			 					<input type="time" id="appt" name="appt" min="00:00" max="24:00" required> 		
+			 					<p class="col-6" >HEURE DE MISE AU CLIGNOTEMENT :</p>	
+			 					<input type="time" id="appt" name="appt" min="00:00" max="24:00" required>		
+			 					<p class="col-6" >HEURE DE MISE AU N0IR</p>	
+								<input type="time" id="appt" name="appt" min="00:00" max="24:00" required> 
+								<p class="col-6" >HEURE DE VERIF ROUGE TESTE</p>	
+								<input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+								<p class="col-6" >HEURE DE REMIS EN TRICOLORE</p>	
+								<input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+								<p class="col-6" >HEURE DE DEPART</p>	
+								<input type="time" id="appt" name="appt" min="00:00" max="24:00" required>
+
+
+		 					</div>
+			 			</fieldset>
+
+		 				<fieldset>
+		 					<legend>Observation et materiel remplacé :</legend>
+
+		 					<div class="row">
+		 						<label class="col-6" for="modifEquip">MODIFICATION EQUIPEMENT</label><input class="col-6" type="checkbox" id="modifEquip" name="modifEquip" value="MODIFICATION EQUIPEMENT">
+							</div>
+							
+	 						<div class="tableauEquipement row">
+	 							<p class='col-2' >N° Pot</p>
+	 							<p class='col-3'> Materiel Démonté</p>
+	 							<p class='col-2' >N° Pot</p>
+	 							<p class='col-3'> Materiel Remonté</p>
+	 							<p class='col-2' >neuf</p>
+	 							
+	 							<div class='row'>
+	 								<input class='col-2' type='' name=''>
+	 								<input class='col-3' type='' name=''>
+	 								<input class='col-2' type='' name=''>
+	 								<input class='col-3' type='' name=''>
+	 								<input class='col-2' type='' name=''>
+	 							</div>
+
+	 						</div>
+
+		 					
+		 				</fieldset>
+
+						<div class="row">
+		 					<p class="col-6" >Temps passé :</p>	
+		 					<input class="col-6" type="" name=""> 		
+		 					<p class="col-6" >Intervention terminée :</p>	
+		 					<input class="col-6" type="" name="">	
+
+		 					<button class="col-6"> Annuler l'intervention</button>
+		 					<button class="col-6"> Terminer l'intervention</button>
+		 				</div>
+		 			</div>
+		 		</form>
+	 		</div>
+
+	 	</form>
+		
+		<script src="script.js"></script>
+
+	 </body>
+</html>
