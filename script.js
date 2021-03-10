@@ -5,3 +5,30 @@ $("input[id='modifEquip']").change(function() {
 	    $('.tableauEquipement').empty(); 
     }
 });
+
+
+
+
+
+
+
+function sendEmail() {
+	console.log("email envoyé")
+  Email.send({
+  Host: "smtp.gmail.com",
+  Username : "tontonriley007@gmail.com",
+  Password : "colin1202",
+  To : 'Hamerel.co@gmail.com',
+  From : "tontonriley007@gmail.com",
+  Subject : "Ceci est un test",
+  Body : "<p>mdr</p>",
+  //Attachments : [
+  	//{
+  	//	name : "smtpjs.png",
+  	//	path:"https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+  	//}]
+  }).then(
+  	message => alert("mail sent successfully")
+
+  );
+}
